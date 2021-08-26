@@ -1,0 +1,43 @@
+name: soni_news_project
+description: A new Flutter project.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  cached_network_image: ^3.1.0
+  cloud_firestore: ^2.5.0
+  cupertino_icons: ^1.0.2
+  dartz: ^0.10.0
+  firebase_auth: ^3.0.2
+  firebase_core: ^1.5.0
+  flutter:
+    sdk: flutter
+  google_sign_in: ^5.0.7
+  intl: ^0.17.0
+  shared_preferences: ^2.0.6
+  sqflite: ^2.0.0+3
+  url_launcher: ^6.0.9
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+ #   - assets/icons/
+
+  fonts:
+    - family: Ubuntu
+      fonts:
+        - asset: assets/fonts/Ubuntu-Regular.ttf
+        - asset: assets/fonts/Ubuntu-Italic.ttf
+          style: italic
+        - asset: assets/fonts/Ubuntu-Bold.ttf
+          weight: 700
