@@ -85,19 +85,7 @@ class _SavedArticleState extends State<Home> {
                   child: ListView(
                     children: [
                       TabBarView(
-                        children: [
-                          Text('Salut Home',
-                              style: TextStyle(color: Colors.red)),
-                          Text('Salut Home',
-                              style: TextStyle(color: Colors.red)),
-                          Text('Salut Home',
-                              style: TextStyle(color: Colors.red))
-                        ],
-                      ),
-                      SizedBox(height: width / 1.5),
-                      Text(
-                        'Salut Home',
-                        style: TextStyle(color: Colors.red),
+                        children: [Business(), Entertainment(), General()],
                       ),
                     ],
                   ))),
