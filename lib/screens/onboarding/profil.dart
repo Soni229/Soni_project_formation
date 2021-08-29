@@ -12,7 +12,8 @@ class Profil extends StatelessWidget {
     var height = MediaQuery.of(context).size.height;
     return Scaffold(
         body: Container(
-      padding: EdgeInsets.symmetric(vertical: 150, horizontal: width / 15),
+      padding:
+          EdgeInsets.symmetric(vertical: height / 12, horizontal: width / 15),
       color: Colors.black12,
       width: width,
       height: height,
