@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:soni_news_project/screens/onboarding/description.dart';
@@ -69,10 +70,13 @@ class _SavedArticleState extends State<SavedArticle> {
                 topLeft: Radius.circular(20),
                 bottomLeft: Radius.circular(20),
               ),
-              child: Image.network(
-                "$photo",
+              child: CachedNetworkImage(
                 width: width / 3.5,
-                height: height,
+                height: height / 3,
+                imageUrl: "$photo",
+                placeholder: (context, url) =>
+                    Center(child: CircularProgressIndicator()),
+                errorWidget: (context, url, error) => Icon(Icons.error),
                 fit: BoxFit.fill,
               ),
             ),
@@ -82,7 +86,7 @@ class _SavedArticleState extends State<SavedArticle> {
                 children: [
                   GestureDetector(
                       child: Container(
-                        padding: EdgeInsets.all(9),
+                        padding: EdgeInsets.all(8),
                         width: width / 1.7,
                         height: height / 8,
                         child: Text(
@@ -100,7 +104,7 @@ class _SavedArticleState extends State<SavedArticle> {
                   Container(
                     alignment: Alignment.bottomCenter,
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         IconButton(
                             onPressed: () {},

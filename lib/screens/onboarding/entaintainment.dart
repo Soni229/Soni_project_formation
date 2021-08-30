@@ -8,6 +8,7 @@ class Entertainment extends StatelessWidget {
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
     var height = MediaQuery.of(context).size.height;
-    return Scaffold(body: SingleChildScrollView());
+    return Scaffold(
+        backgroundColor: Color(0xff292e42), body: SingleChildScrollView());
   }
 }

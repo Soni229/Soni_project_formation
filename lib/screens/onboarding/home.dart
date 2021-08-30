@@ -33,6 +33,7 @@ class _SavedArticleState extends State<Home> {
       home: DefaultTabController(
         length: 3,
         child: Scaffold(
+          backgroundColor: Color(0xff292e42),
           appBar: AppBar(
             actions: [
               Container(
@@ -80,15 +81,13 @@ class _SavedArticleState extends State<Home> {
             ),
           ),
           body: SafeArea(
-              child: Padding(
-                  padding: EdgeInsets.all(5),
-                  child: ListView(
-                    children: [
-                      TabBarView(
-                        children: [Business(), Entertainment(), General()],
-                      ),
-                    ],
-                  ))),
+            child: Padding(
+              padding: EdgeInsets.all(5),
+              child: TabBarView(
+                children: [Business(), Entertainment(), General()],
+              ),
+            ),
+          ),
         ),
       ),
     );

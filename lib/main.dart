@@ -71,6 +71,9 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Color(0xff292e42),
+        // fixedColor: Color(0xff5c6174),
+        selectedItemColor: Color(0xffde5b31),
         currentIndex: currentIndex,
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
